@@ -12,15 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
+    static var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
+    var rootVC: RootViewController {
+        return window?.rootViewController as! RootViewController
+    }
+
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        // Unityの初期化をバックグラウンドで行うため必ず先頭で呼び出す
+        Unity.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
         setRootVC()
-
-        // Unityを呼び出す
-        Unity.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
 }

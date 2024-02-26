@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Unity: NSObject, UnityFrameworkListener {
+final class Unity: NSObject, UnityFrameworkListener {
 
     static let shared = Unity()
     private let unityFramework: UnityFramework
@@ -20,8 +20,6 @@ class Unity: NSObject, UnityFrameworkListener {
         if !bundle.isLoaded {
             bundle.load()
         }
-        // It needs disable swiftlint rule due to needs for unwrapping before calling super.init()
-        // swiftlint:disable:next force_cast
         let frameworkClass = bundle.principalClass as! UnityFramework.Type
         let framework = frameworkClass.getInstance()!
         if framework.appController() == nil {

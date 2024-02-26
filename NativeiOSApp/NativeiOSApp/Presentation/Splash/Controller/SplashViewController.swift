@@ -8,10 +8,23 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+final class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        transitionHostViewVC()
+    }
+
+}
+
+// MARK: - Private
+
+private extension SplashViewController {
+
+    func transitionHostViewVC() {
+        DispatchQueue.main.async {
+            AppDelegate.shared.rootVC.transitionToMainTab()
+        }
     }
 
 }

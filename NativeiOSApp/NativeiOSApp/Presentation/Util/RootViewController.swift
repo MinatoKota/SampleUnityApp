@@ -35,11 +35,15 @@ final class RootViewController: UIViewController {
 
     // MARK: - Methods
 
-//    func transitionToMainTab() {
-//        let vc = MainTabBarController()
-//        transition(to: vc)
-//    }
-//
+    func transitionToHostVC() {
+        let vc = HostViewController()
+        transition(to: vc)
+    }
+
+    func transitionToMainTab() {
+        let vc = MainTabBarController()
+        transition(to: vc)
+    }
 
 }
 
@@ -68,3 +72,4 @@ private extension RootViewController {
         currentVC = vc
     }
 }
+

@@ -12,6 +12,16 @@
 		142213F72B888A9E0068A519 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213F62B888A9E0068A519 /* RootViewController.swift */; };
 		142214092B8C1E330068A519 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214082B8C1E330068A519 /* Unity.swift */; };
 		1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422140D2B8C1F510068A519 /* HostPresenter.swift */; };
+		142214112B8C430A0068A519 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214102B8C430A0068A519 /* MainTabBarController.swift */; };
+		142214152B8C43F40068A519 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214142B8C43F40068A519 /* MainNavigationController.swift */; };
+		1422141C2B8C45330068A519 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422141A2B8C45330068A519 /* BoardViewController.swift */; };
+		1422141D2B8C45330068A519 /* BoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1422141B2B8C45330068A519 /* BoardViewController.xib */; };
+		142214202B8C45480068A519 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422141E2B8C45480068A519 /* ConversationListViewController.swift */; };
+		142214212B8C45480068A519 /* ConversationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1422141F2B8C45480068A519 /* ConversationListViewController.xib */; };
+		142214242B8C45610068A519 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214222B8C45610068A519 /* MyPageViewController.swift */; };
+		142214252B8C45610068A519 /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142214232B8C45610068A519 /* MyPageViewController.xib */; };
+		142214282B8C45750068A519 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214262B8C45750068A519 /* SearchUserViewController.swift */; };
+		142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142214272B8C45750068A519 /* SearchUserViewController.xib */; };
 		144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; };
 		144159612B8869E200AD3750 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFB246E7721006A31CC /* HostViewController.swift */; };
@@ -43,6 +53,16 @@
 		142213F62B888A9E0068A519 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		142214082B8C1E330068A519 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
 		1422140D2B8C1F510068A519 /* HostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPresenter.swift; sourceTree = "<group>"; };
+		142214102B8C430A0068A519 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		142214142B8C43F40068A519 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		1422141A2B8C45330068A519 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		1422141B2B8C45330068A519 /* BoardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardViewController.xib; sourceTree = "<group>"; };
+		1422141E2B8C45480068A519 /* ConversationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
+		1422141F2B8C45480068A519 /* ConversationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationListViewController.xib; sourceTree = "<group>"; };
+		142214222B8C45610068A519 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		142214232B8C45610068A519 /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
+		142214262B8C45750068A519 /* SearchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
+		142214272B8C45750068A519 /* SearchUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserViewController.xib; sourceTree = "<group>"; };
 		1441595F2B8869E200AD3750 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -73,7 +93,11 @@
 		142213EC2B88885D0068A519 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				142214182B8C44FF0068A519 /* Board */,
+				142214172B8C44EE0068A519 /* ConversationList */,
 				1422140A2B8C1F220068A519 /* Host */,
+				142214192B8C45090068A519 /* MyPage */,
+				142214162B8C44DD0068A519 /* SearchUser */,
 				142213ED2B8888700068A519 /* Splash */,
 				142213F42B888A5C0068A519 /* Util */,
 			);
@@ -83,7 +107,7 @@
 		142213ED2B8888700068A519 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				142213EF2B8889DE0068A519 /* Pesenter */,
+				1422140F2B8C3D070068A519 /* Presenter */,
 				142213EE2B8888C10068A519 /* Controller */,
 			);
 			path = Splash;
@@ -98,27 +122,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		142213EF2B8889DE0068A519 /* Pesenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pesenter;
-			sourceTree = "<group>";
-		};
 		142213F42B888A5C0068A519 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				142213F52B888A760068A519 /* Authority */,
+				142214122B8C433A0068A519 /* Tab */,
+				142213F62B888A9E0068A519 /* RootViewController.swift */,
+				142214102B8C430A0068A519 /* MainTabBarController.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		142213F52B888A760068A519 /* Authority */ = {
-			isa = PBXGroup;
-			children = (
-				142213F62B888A9E0068A519 /* RootViewController.swift */,
-			);
-			path = Authority;
 			sourceTree = "<group>";
 		};
 		142213F82B888DA10068A519 /* Domain */ = {
@@ -142,7 +153,6 @@
 			children = (
 				1422140C2B8C1F3D0068A519 /* Presenter */,
 				1422140B2B8C1F300068A519 /* Controller */,
-				8CAE7EFB246E7721006A31CC /* HostViewController.swift */,
 			);
 			path = Host;
 			sourceTree = "<group>";
@@ -150,6 +160,7 @@
 		1422140B2B8C1F300068A519 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8CAE7EFB246E7721006A31CC /* HostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +171,65 @@
 				1422140D2B8C1F510068A519 /* HostPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1422140F2B8C3D070068A519 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		142214122B8C433A0068A519 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				142214132B8C43C70068A519 /* View */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		142214132B8C43C70068A519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				142214142B8C43F40068A519 /* MainNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		142214162B8C44DD0068A519 /* SearchUser */ = {
+			isa = PBXGroup;
+			children = (
+				142214262B8C45750068A519 /* SearchUserViewController.swift */,
+				142214272B8C45750068A519 /* SearchUserViewController.xib */,
+			);
+			path = SearchUser;
+			sourceTree = "<group>";
+		};
+		142214172B8C44EE0068A519 /* ConversationList */ = {
+			isa = PBXGroup;
+			children = (
+				1422141E2B8C45480068A519 /* ConversationListViewController.swift */,
+				1422141F2B8C45480068A519 /* ConversationListViewController.xib */,
+			);
+			path = ConversationList;
+			sourceTree = "<group>";
+		};
+		142214182B8C44FF0068A519 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				1422141A2B8C45330068A519 /* BoardViewController.swift */,
+				1422141B2B8C45330068A519 /* BoardViewController.xib */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		142214192B8C45090068A519 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				142214222B8C45610068A519 /* MyPageViewController.swift */,
+				142214232B8C45610068A519 /* MyPageViewController.xib */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		9D15FC362264A15F0006315A = {
@@ -264,9 +334,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142214252B8C45610068A519 /* MyPageViewController.xib in Resources */,
+				142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */,
 				9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */,
+				142214212B8C45480068A519 /* ConversationListViewController.xib in Resources */,
 				9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */,
 				9D15FC4A2264A1600006315A /* Main.storyboard in Resources */,
+				1422141D2B8C45330068A519 /* BoardViewController.xib in Resources */,
 				142213F32B888A070068A519 /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,13 +352,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142214152B8C43F40068A519 /* MainNavigationController.swift in Sources */,
+				142214282B8C45750068A519 /* SearchUserViewController.swift in Sources */,
 				142213F72B888A9E0068A519 /* RootViewController.swift in Sources */,
 				8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */,
+				142214112B8C430A0068A519 /* MainTabBarController.swift in Sources */,
+				142214202B8C45480068A519 /* ConversationListViewController.swift in Sources */,
 				8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */,
 				1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */,
+				142214242B8C45610068A519 /* MyPageViewController.swift in Sources */,
 				8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */,
 				142214092B8C1E330068A519 /* Unity.swift in Sources */,
 				142213F22B888A070068A519 /* SplashViewController.swift in Sources */,
+				1422141C2B8C45330068A519 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R884XKN56;
 				INFOPLIST_FILE = NativeiOSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R884XKN56;
 				INFOPLIST_FILE = NativeiOSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
