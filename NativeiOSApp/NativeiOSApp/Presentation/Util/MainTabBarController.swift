@@ -65,7 +65,7 @@ private extension MainTabBarController {
         var viewControllers: [UIViewController] = []
 
         // さがす画面
-        let searchUserViewController = generateViewController(tabTitle: "さがす", vc: HostViewController(),
+        let searchUserViewController = generateViewController(tabTitle: "さがす", vc: SearchUserViewController(),
                                                               tabImage: UIImage(systemName: "magnifyingglass")!.withTintColor(.systemGray),
                                                               selectedImage: UIImage(systemName: "magnifyingglass")!.withTintColor(.black))
 
@@ -78,7 +78,7 @@ private extension MainTabBarController {
         viewControllers.append(messageViewController)
 
         // 掲示板
-        let boardVC = BoardViewController()
+        let boardVC = HostViewController()
         let boardViewController = generateViewController(tabTitle: "掲示板", vc: boardVC,
                                                          tabImage: UIImage(systemName: "note.text")!.withTintColor(.systemGray),
                                                          selectedImage: UIImage(systemName: "note.text")!.withTintColor(.black))
