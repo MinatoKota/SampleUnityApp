@@ -2,13 +2,14 @@
 //  Unity.swift
 //  NativeiOSApp
 //
-//  Created by minato on 2024/02/23.
+//  Created by minato on 2024/02/26.
 //  Copyright © 2024 unity. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class Unity: NSObject, UnityFrameworkListener {
+
     static let shared = Unity()
     private let unityFramework: UnityFramework
 
@@ -41,12 +42,10 @@ class Unity: NSObject, UnityFrameworkListener {
                                    argv: CommandLine.unsafeArgv, appLaunchOpts: launchOptions)
     }
 
-    // UnityのWindowからViewだけを返す
     var view: UIView {
         unityFramework.appController()!.rootView!
     }
 
-    // ネイティブ側からUnityのメソッドを呼び出す
     func sendMessageToUnity(objectName: String, functionName: String, argument: String) {
         unityFramework.sendMessageToGO(withName: objectName, functionName: functionName, message: argument)
     }

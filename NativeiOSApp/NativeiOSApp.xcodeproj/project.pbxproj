@@ -10,7 +10,8 @@
 		142213F22B888A070068A519 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213F02B888A070068A519 /* SplashViewController.swift */; };
 		142213F32B888A070068A519 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142213F12B888A070068A519 /* SplashViewController.xib */; };
 		142213F72B888A9E0068A519 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213F62B888A9E0068A519 /* RootViewController.swift */; };
-		142213FB2B888DE00068A519 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213FA2B888DE00068A519 /* Unity.swift */; };
+		142214092B8C1E330068A519 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214082B8C1E330068A519 /* Unity.swift */; };
+		1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422140D2B8C1F510068A519 /* HostPresenter.swift */; };
 		144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; };
 		144159612B8869E200AD3750 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFB246E7721006A31CC /* HostViewController.swift */; };
@@ -40,7 +41,8 @@
 		142213F02B888A070068A519 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		142213F12B888A070068A519 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		142213F62B888A9E0068A519 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		142213FA2B888DE00068A519 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
+		142214082B8C1E330068A519 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
+		1422140D2B8C1F510068A519 /* HostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPresenter.swift; sourceTree = "<group>"; };
 		1441595F2B8869E200AD3750 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		142213EC2B88885D0068A519 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1422140A2B8C1F220068A519 /* Host */,
 				142213ED2B8888700068A519 /* Splash */,
 				142213F42B888A5C0068A519 /* Util */,
 			);
@@ -129,9 +132,34 @@
 		142213F92B888DB90068A519 /* Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				142213FA2B888DE00068A519 /* Unity.swift */,
+				142214082B8C1E330068A519 /* Unity.swift */,
 			);
 			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		1422140A2B8C1F220068A519 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				1422140C2B8C1F3D0068A519 /* Presenter */,
+				1422140B2B8C1F300068A519 /* Controller */,
+				8CAE7EFB246E7721006A31CC /* HostViewController.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		1422140B2B8C1F300068A519 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1422140C2B8C1F3D0068A519 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1422140D2B8C1F510068A519 /* HostPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9D15FC362264A15F0006315A = {
@@ -155,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				8CAE7EFD246E7722006A31CC /* AppDelegate.swift */,
-				8CAE7EFB246E7721006A31CC /* HostViewController.swift */,
 				8CAE7EFC246E7721006A31CC /* UnityUIView.swift */,
 				9D15FC482264A1600006315A /* Main.storyboard */,
 				9D15FC4B2264A1600006315A /* Assets.xcassets */,
@@ -252,10 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				142213F72B888A9E0068A519 /* RootViewController.swift in Sources */,
-				142213FB2B888DE00068A519 /* Unity.swift in Sources */,
 				8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */,
 				8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */,
+				1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */,
 				8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */,
+				142214092B8C1E330068A519 /* Unity.swift in Sources */,
 				142213F22B888A070068A519 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
