@@ -19,12 +19,6 @@ class HostViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        // addSubView
-        view.addSubview(unityView)
-        // 追加したsubViewのサイズをViewControllerのViewのサイズに合わせる
-        unityView.frame = view.frame
-        // 追加したsubViewを背面へ（addSubViewは最前面に追加するため、ViewControllerのViewの後ろに設定する必要がある）
-        view.sendSubviewToBack(unityView)
     }
 
     @available(*, unavailable)

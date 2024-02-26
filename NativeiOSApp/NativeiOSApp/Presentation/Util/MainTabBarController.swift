@@ -78,7 +78,7 @@ private extension MainTabBarController {
         viewControllers.append(messageViewController)
 
         // 掲示板
-        let boardVC = HostViewController()
+        let boardVC = BoardViewController()
         let boardViewController = generateViewController(tabTitle: "掲示板", vc: boardVC,
                                                          tabImage: UIImage(systemName: "note.text")!.withTintColor(.systemGray),
                                                          selectedImage: UIImage(systemName: "note.text")!.withTintColor(.black))

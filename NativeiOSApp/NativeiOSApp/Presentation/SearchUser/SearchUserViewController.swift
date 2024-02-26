@@ -10,21 +10,16 @@ import UIKit
 
 class SearchUserViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var callButton: UIButton!
 
-        // Do any additional setup after loading the view.
+    @IBAction func tappedCallButton(_ sender: UIButton) {
+        let vc = CallViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
-    */
 
 }

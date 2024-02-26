@@ -22,6 +22,9 @@
 		142214252B8C45610068A519 /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142214232B8C45610068A519 /* MyPageViewController.xib */; };
 		142214282B8C45750068A519 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214262B8C45750068A519 /* SearchUserViewController.swift */; };
 		142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142214272B8C45750068A519 /* SearchUserViewController.xib */; };
+		1422143D2B8C65BE0068A519 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422143B2B8C65BE0068A519 /* CallViewController.swift */; };
+		1422143E2B8C65BE0068A519 /* CallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1422143C2B8C65BE0068A519 /* CallViewController.xib */; };
+		142214402B8C65D20068A519 /* CallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422143F2B8C65D20068A519 /* CallPresenter.swift */; };
 		144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; };
 		144159612B8869E200AD3750 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFB246E7721006A31CC /* HostViewController.swift */; };
@@ -63,6 +66,9 @@
 		142214232B8C45610068A519 /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
 		142214262B8C45750068A519 /* SearchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		142214272B8C45750068A519 /* SearchUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserViewController.xib; sourceTree = "<group>"; };
+		1422143B2B8C65BE0068A519 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		1422143C2B8C65BE0068A519 /* CallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallViewController.xib; sourceTree = "<group>"; };
+		1422143F2B8C65D20068A519 /* CallPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPresenter.swift; sourceTree = "<group>"; };
 		1441595F2B8869E200AD3750 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				142214182B8C44FF0068A519 /* Board */,
+				142214382B8C65880068A519 /* Call */,
 				142214172B8C44EE0068A519 /* ConversationList */,
 				1422140A2B8C1F220068A519 /* Host */,
 				142214192B8C45090068A519 /* MyPage */,
@@ -232,6 +239,32 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		142214382B8C65880068A519 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				1422143A2B8C65A90068A519 /* Presenter */,
+				142214392B8C65940068A519 /* Controller */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		142214392B8C65940068A519 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1422143B2B8C65BE0068A519 /* CallViewController.swift */,
+				1422143C2B8C65BE0068A519 /* CallViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1422143A2B8C65A90068A519 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1422143F2B8C65D20068A519 /* CallPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		9D15FC362264A15F0006315A = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +370,7 @@
 				142214252B8C45610068A519 /* MyPageViewController.xib in Resources */,
 				142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */,
 				9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */,
+				1422143E2B8C65BE0068A519 /* CallViewController.xib in Resources */,
 				142214212B8C45480068A519 /* ConversationListViewController.xib in Resources */,
 				9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */,
 				9D15FC4A2264A1600006315A /* Main.storyboard in Resources */,
@@ -358,7 +392,9 @@
 				8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */,
 				142214112B8C430A0068A519 /* MainTabBarController.swift in Sources */,
 				142214202B8C45480068A519 /* ConversationListViewController.swift in Sources */,
+				1422143D2B8C65BE0068A519 /* CallViewController.swift in Sources */,
 				8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */,
+				142214402B8C65D20068A519 /* CallPresenter.swift in Sources */,
 				1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */,
 				142214242B8C45610068A519 /* MyPageViewController.swift in Sources */,
 				8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */,
