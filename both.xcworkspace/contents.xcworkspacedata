@@ -5,6 +5,6 @@
       location = "group:NativeiOSApp/NativeiOSApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../Unity/iOSBuild/Unity-iPhone.xcodeproj">
+      location = "group:../../Unity/build2/Unity-iPhone.xcodeproj">
    </FileRef>
 </Workspace>
