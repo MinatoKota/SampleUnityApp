@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:NativeiOSApp/NativeiOSApp.xcodeproj">
+      location = "group:../../Unity/build2024.03.04/Unity-iPhone.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../Unity/build3/Unity-iPhone.xcodeproj">
+      location = "group:NativeiOSApp/NativeiOSApp.xcodeproj">
    </FileRef>
 </Workspace>

@@ -6,16 +6,44 @@
 //  Copyright © 2024 unity. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class CallPresenter: UIView {
+protocol CallPresenterInput: AnyObject {
+    func sendData()
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+}
+
+protocol CallPresenterOutPut: AnyObject {
+
+}
+
+final class CallPresenter: CallPresenterInput {
+
+    private weak var view: CallPresenterOutPut?
+
+    init(view: CallPresenterOutPut) {
+        self.view = view
     }
-    */
 
+    func sendData() {
+
+        // UnityFrameworkdのメソッドを呼び出す
+        Unity.shared
+            .sendMessageToUnity(objectName: "miku", functionName: "PlayMotion", argument: "")
+    }
+
+}
+
+public class NativePlugin {
+
+    public static func showMessage(_ message: String) {
+        print(message)
+    }
+}
+
+// UnityとSwiftを繋げるための関数
+@_cdecl("showMessage")
+public func showMessage(message: UnsafePointer<CChar>)
+{
+    NativePlugin.showMessage(String(cString: message))
 }
