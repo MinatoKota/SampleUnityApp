@@ -3,16 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		142213F22B888A070068A519 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213F02B888A070068A519 /* SplashViewController.swift */; };
 		142213F32B888A070068A519 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142213F12B888A070068A519 /* SplashViewController.xib */; };
 		142213F72B888A9E0068A519 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213F62B888A9E0068A519 /* RootViewController.swift */; };
-		142213FB2B888DE00068A519 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142213FA2B888DE00068A519 /* Unity.swift */; };
+		142214092B8C1E330068A519 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214082B8C1E330068A519 /* Unity.swift */; };
+		1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422140D2B8C1F510068A519 /* HostPresenter.swift */; };
+		142214112B8C430A0068A519 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214102B8C430A0068A519 /* MainTabBarController.swift */; };
+		142214152B8C43F40068A519 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214142B8C43F40068A519 /* MainNavigationController.swift */; };
+		1422141C2B8C45330068A519 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422141A2B8C45330068A519 /* BoardViewController.swift */; };
+		1422141D2B8C45330068A519 /* BoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1422141B2B8C45330068A519 /* BoardViewController.xib */; };
+		142214202B8C45480068A519 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422141E2B8C45480068A519 /* ConversationListViewController.swift */; };
+		142214212B8C45480068A519 /* ConversationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1422141F2B8C45480068A519 /* ConversationListViewController.xib */; };
+		142214242B8C45610068A519 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214222B8C45610068A519 /* MyPageViewController.swift */; };
+		142214252B8C45610068A519 /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142214232B8C45610068A519 /* MyPageViewController.xib */; };
+		142214282B8C45750068A519 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142214262B8C45750068A519 /* SearchUserViewController.swift */; };
+		142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142214272B8C45750068A519 /* SearchUserViewController.xib */; };
+		1422143D2B8C65BE0068A519 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422143B2B8C65BE0068A519 /* CallViewController.swift */; };
+		1422143E2B8C65BE0068A519 /* CallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1422143C2B8C65BE0068A519 /* CallViewController.xib */; };
+		142214402B8C65D20068A519 /* CallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422143F2B8C65D20068A519 /* CallPresenter.swift */; };
 		144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; };
 		144159612B8869E200AD3750 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14F756712B9ED54300351809 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14F756702B9ED54300351809 /* AgoraRtcKit */; };
+		14F756752B9ED5E900351809 /* AgoraRtcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756742B9ED5E900351809 /* AgoraRtcManager.swift */; };
+		14F756782B9ED68F00351809 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14F756772B9ED68F00351809 /* AgoraRtmKit */; };
+		14F7567A2B9ED6C800351809 /* AgoraRtmSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756792B9ED6C800351809 /* AgoraRtmSystemManager.swift */; };
+		14F7567C2B9ED6FB00351809 /* AgoraRtmChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7567B2B9ED6FB00351809 /* AgoraRtmChannelManager.swift */; };
+		14F7567F2B9ED74B00351809 /* ResultWithErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7567E2B9ED74B00351809 /* ResultWithErrorCode.swift */; };
+		14F756822B9ED7C000351809 /* RtmMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756812B9ED7C000351809 /* RtmMessage.swift */; };
 		8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFB246E7721006A31CC /* HostViewController.swift */; };
 		8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFC246E7721006A31CC /* UnityUIView.swift */; };
 		8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFD246E7722006A31CC /* AppDelegate.swift */; };
@@ -40,8 +61,27 @@
 		142213F02B888A070068A519 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		142213F12B888A070068A519 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		142213F62B888A9E0068A519 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		142213FA2B888DE00068A519 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
+		142214082B8C1E330068A519 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
+		1422140D2B8C1F510068A519 /* HostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPresenter.swift; sourceTree = "<group>"; };
+		142214102B8C430A0068A519 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		142214142B8C43F40068A519 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		1422141A2B8C45330068A519 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		1422141B2B8C45330068A519 /* BoardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardViewController.xib; sourceTree = "<group>"; };
+		1422141E2B8C45480068A519 /* ConversationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
+		1422141F2B8C45480068A519 /* ConversationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationListViewController.xib; sourceTree = "<group>"; };
+		142214222B8C45610068A519 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		142214232B8C45610068A519 /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
+		142214262B8C45750068A519 /* SearchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
+		142214272B8C45750068A519 /* SearchUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUserViewController.xib; sourceTree = "<group>"; };
+		1422143B2B8C65BE0068A519 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		1422143C2B8C65BE0068A519 /* CallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallViewController.xib; sourceTree = "<group>"; };
+		1422143F2B8C65D20068A519 /* CallPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPresenter.swift; sourceTree = "<group>"; };
 		1441595F2B8869E200AD3750 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F756742B9ED5E900351809 /* AgoraRtcManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraRtcManager.swift; sourceTree = "<group>"; };
+		14F756792B9ED6C800351809 /* AgoraRtmSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraRtmSystemManager.swift; sourceTree = "<group>"; };
+		14F7567B2B9ED6FB00351809 /* AgoraRtmChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraRtmChannelManager.swift; sourceTree = "<group>"; };
+		14F7567E2B9ED74B00351809 /* ResultWithErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWithErrorCode.swift; sourceTree = "<group>"; };
+		14F756812B9ED7C000351809 /* RtmMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtmMessage.swift; sourceTree = "<group>"; };
 		8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		8CAE7EFB246E7721006A31CC /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F756782B9ED68F00351809 /* AgoraRtmKit in Frameworks */,
+				14F756712B9ED54300351809 /* AgoraRtcKit in Frameworks */,
 				9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */,
 				144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */,
 			);
@@ -71,6 +113,12 @@
 		142213EC2B88885D0068A519 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				142214182B8C44FF0068A519 /* Board */,
+				142214382B8C65880068A519 /* Call */,
+				142214172B8C44EE0068A519 /* ConversationList */,
+				1422140A2B8C1F220068A519 /* Host */,
+				142214192B8C45090068A519 /* MyPage */,
+				142214162B8C44DD0068A519 /* SearchUser */,
 				142213ED2B8888700068A519 /* Splash */,
 				142213F42B888A5C0068A519 /* Util */,
 			);
@@ -80,7 +128,7 @@
 		142213ED2B8888700068A519 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				142213EF2B8889DE0068A519 /* Pesenter */,
+				1422140F2B8C3D070068A519 /* Presenter */,
 				142213EE2B8888C10068A519 /* Controller */,
 			);
 			path = Splash;
@@ -95,27 +143,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		142213EF2B8889DE0068A519 /* Pesenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pesenter;
-			sourceTree = "<group>";
-		};
 		142213F42B888A5C0068A519 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				142213F52B888A760068A519 /* Authority */,
+				142214122B8C433A0068A519 /* Tab */,
+				142213F62B888A9E0068A519 /* RootViewController.swift */,
+				142214102B8C430A0068A519 /* MainTabBarController.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		142213F52B888A760068A519 /* Authority */ = {
-			isa = PBXGroup;
-			children = (
-				142213F62B888A9E0068A519 /* RootViewController.swift */,
-			);
-			path = Authority;
 			sourceTree = "<group>";
 		};
 		142213F82B888DA10068A519 /* Domain */ = {
@@ -129,9 +164,163 @@
 		142213F92B888DB90068A519 /* Wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				142213FA2B888DE00068A519 /* Unity.swift */,
+				14F7566C2B9ED27C00351809 /* Agora */,
+				142214082B8C1E330068A519 /* Unity.swift */,
 			);
 			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		1422140A2B8C1F220068A519 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				1422140C2B8C1F3D0068A519 /* Presenter */,
+				1422140B2B8C1F300068A519 /* Controller */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		1422140B2B8C1F300068A519 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE7EFB246E7721006A31CC /* HostViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1422140C2B8C1F3D0068A519 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1422140D2B8C1F510068A519 /* HostPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1422140F2B8C3D070068A519 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		142214122B8C433A0068A519 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				142214132B8C43C70068A519 /* View */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		142214132B8C43C70068A519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				142214142B8C43F40068A519 /* MainNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		142214162B8C44DD0068A519 /* SearchUser */ = {
+			isa = PBXGroup;
+			children = (
+				142214262B8C45750068A519 /* SearchUserViewController.swift */,
+				142214272B8C45750068A519 /* SearchUserViewController.xib */,
+			);
+			path = SearchUser;
+			sourceTree = "<group>";
+		};
+		142214172B8C44EE0068A519 /* ConversationList */ = {
+			isa = PBXGroup;
+			children = (
+				1422141E2B8C45480068A519 /* ConversationListViewController.swift */,
+				1422141F2B8C45480068A519 /* ConversationListViewController.xib */,
+			);
+			path = ConversationList;
+			sourceTree = "<group>";
+		};
+		142214182B8C44FF0068A519 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				1422141A2B8C45330068A519 /* BoardViewController.swift */,
+				1422141B2B8C45330068A519 /* BoardViewController.xib */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		142214192B8C45090068A519 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				142214222B8C45610068A519 /* MyPageViewController.swift */,
+				142214232B8C45610068A519 /* MyPageViewController.xib */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		142214382B8C65880068A519 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				1422143A2B8C65A90068A519 /* Presenter */,
+				142214392B8C65940068A519 /* Controller */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		142214392B8C65940068A519 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1422143B2B8C65BE0068A519 /* CallViewController.swift */,
+				1422143C2B8C65BE0068A519 /* CallViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1422143A2B8C65A90068A519 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1422143F2B8C65D20068A519 /* CallPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		14F7566C2B9ED27C00351809 /* Agora */ = {
+			isa = PBXGroup;
+			children = (
+				14F756802B9ED7A100351809 /* MessageType */,
+				14F7566E2B9ED29E00351809 /* Rtc */,
+				14F7566D2B9ED29700351809 /* Rtm */,
+			);
+			path = Agora;
+			sourceTree = "<group>";
+		};
+		14F7566D2B9ED29700351809 /* Rtm */ = {
+			isa = PBXGroup;
+			children = (
+				14F756792B9ED6C800351809 /* AgoraRtmSystemManager.swift */,
+				14F7567B2B9ED6FB00351809 /* AgoraRtmChannelManager.swift */,
+			);
+			path = Rtm;
+			sourceTree = "<group>";
+		};
+		14F7566E2B9ED29E00351809 /* Rtc */ = {
+			isa = PBXGroup;
+			children = (
+				14F756742B9ED5E900351809 /* AgoraRtcManager.swift */,
+			);
+			path = Rtc;
+			sourceTree = "<group>";
+		};
+		14F7567D2B9ED73100351809 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				14F7567E2B9ED74B00351809 /* ResultWithErrorCode.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		14F756802B9ED7A100351809 /* MessageType */ = {
+			isa = PBXGroup;
+			children = (
+				14F756812B9ED7C000351809 /* RtmMessage.swift */,
+			);
+			path = MessageType;
 			sourceTree = "<group>";
 		};
 		9D15FC362264A15F0006315A = {
@@ -154,8 +343,8 @@
 		9D15FC412264A1600006315A /* NativeiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				14F7567D2B9ED73100351809 /* Enum */,
 				8CAE7EFD246E7722006A31CC /* AppDelegate.swift */,
-				8CAE7EFB246E7721006A31CC /* HostViewController.swift */,
 				8CAE7EFC246E7721006A31CC /* UnityUIView.swift */,
 				9D15FC482264A1600006315A /* Main.storyboard */,
 				9D15FC4B2264A1600006315A /* Assets.xcassets */,
@@ -195,6 +384,10 @@
 			dependencies = (
 			);
 			name = NativeiOSApp;
+			packageProductDependencies = (
+				14F756702B9ED54300351809 /* AgoraRtcKit */,
+				14F756772B9ED68F00351809 /* AgoraRtmKit */,
+			);
 			productName = NativeiOSApp;
 			productReference = 9D15FC3F2264A1600006315A /* NativeiOSApp.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +416,10 @@
 				Base,
 			);
 			mainGroup = 9D15FC362264A15F0006315A;
+			packageReferences = (
+				14F7566F2B9ED54200351809 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+				14F756762B9ED68F00351809 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */,
+			);
 			productRefGroup = 9D15FC402264A1600006315A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,9 +434,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142214252B8C45610068A519 /* MyPageViewController.xib in Resources */,
+				142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */,
 				9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */,
+				1422143E2B8C65BE0068A519 /* CallViewController.xib in Resources */,
+				142214212B8C45480068A519 /* ConversationListViewController.xib in Resources */,
 				9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */,
 				9D15FC4A2264A1600006315A /* Main.storyboard in Resources */,
+				1422141D2B8C45330068A519 /* BoardViewController.xib in Resources */,
 				142213F32B888A070068A519 /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +453,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142214152B8C43F40068A519 /* MainNavigationController.swift in Sources */,
+				14F756752B9ED5E900351809 /* AgoraRtcManager.swift in Sources */,
+				142214282B8C45750068A519 /* SearchUserViewController.swift in Sources */,
+				14F756822B9ED7C000351809 /* RtmMessage.swift in Sources */,
 				142213F72B888A9E0068A519 /* RootViewController.swift in Sources */,
-				142213FB2B888DE00068A519 /* Unity.swift in Sources */,
+				14F7567C2B9ED6FB00351809 /* AgoraRtmChannelManager.swift in Sources */,
 				8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */,
+				142214112B8C430A0068A519 /* MainTabBarController.swift in Sources */,
+				142214202B8C45480068A519 /* ConversationListViewController.swift in Sources */,
+				1422143D2B8C65BE0068A519 /* CallViewController.swift in Sources */,
 				8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */,
+				142214402B8C65D20068A519 /* CallPresenter.swift in Sources */,
+				1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */,
+				142214242B8C45610068A519 /* MyPageViewController.swift in Sources */,
 				8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */,
+				14F7567F2B9ED74B00351809 /* ResultWithErrorCode.swift in Sources */,
+				14F7567A2B9ED6C800351809 /* AgoraRtmSystemManager.swift in Sources */,
+				142214092B8C1E330068A519 /* Unity.swift in Sources */,
 				142213F22B888A070068A519 /* SplashViewController.swift in Sources */,
+				1422141C2B8C45330068A519 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R884XKN56;
 				INFOPLIST_FILE = NativeiOSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R884XKN56;
 				INFOPLIST_FILE = NativeiOSApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +675,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14F7566F2B9ED54200351809 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 3.6.2;
+			};
+		};
+		14F756762B9ED68F00351809 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRTM_iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 1.4.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14F756702B9ED54300351809 /* AgoraRtcKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14F7566F2B9ED54200351809 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AgoraRtcKit;
+		};
+		14F756772B9ED68F00351809 /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14F756762B9ED68F00351809 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */;
+			productName = AgoraRtmKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D15FC372264A15F0006315A /* Project object */;
 }
