@@ -30,7 +30,6 @@ final class AgoraRtcManager{
     func setup(appId: String, delegate: AgoraRtcEngineDelegate) {
         kit = AgoraRtcEngineKit.sharedEngine(withAppId: appId, delegate: delegate)
         kit?.enableVideo()
-        addBeautyOptions()
         print("🚀RTCのセットアップ完了")
     }
 
@@ -48,11 +47,9 @@ final class AgoraRtcManager{
     ///   - info:チャンネルについての追加情報を追加できる。なくても問題ない。
     ///   - completion: チャンネルに入室したら呼ばれる。
     func joinChannel(token: String, channelId: String, info: String? = nil, completion: @escaping () -> Void) {
-//        let userId = LoginUser.shared.getUserId()
-//        let uid = AgoraUIDGenerator.generate(from: userId)
-//        kit?.joinChannel(byToken: token, channelId: channelId, info: info, uid: uid, joinSuccess: { result1, result2, result3 in
-//            completion()
-//        })
+        kit?.joinChannel(byToken: token, channelId: channelId, info: info, uid: 0, joinSuccess: { result1, result2, result3 in
+            completion()
+        })
     }
 
     /// チャンネルから退室するときに呼ぶ。
@@ -137,20 +134,5 @@ final class AgoraRtcManager{
     /// 自分のカメラの内外を入れ替えるときに呼ぶ。
     func switchCamera() {
         kit?.switchCamera()
-    }
-}
-
-// MARK: - Private Methods
-
-private extension AgoraRtcManager {
-
-    /// 美白フィルター
-    func addBeautyOptions() {
-        let beautyOptions = AgoraBeautyOptions()
-        beautyOptions.lighteningContrastLevel = .normal
-        beautyOptions.rednessLevel = 0.1
-        beautyOptions.smoothnessLevel = 0.7
-        beautyOptions.lighteningLevel = 0.7
-        kit?.setBeautyEffectOptions(true, options: beautyOptions)
     }
 }

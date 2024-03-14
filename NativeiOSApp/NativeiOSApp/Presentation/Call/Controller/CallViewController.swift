@@ -21,24 +21,28 @@ final class CallViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        presenter = CallPresenter(view: self)
+        presenter = CallPresenter(view: self, useCase: CallUseCase())
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         avatarView.addSubview(unityView)
         unityView.frame = avatarView.bounds
         avatarView.sendSubviewToBack(unityView)
+        presenter?.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        presenter?.viewWillDisappear()
     }
 
 }
@@ -47,5 +51,8 @@ final class CallViewController: UIViewController {
 
 extension CallViewController: CallPresenterOutPut {
 
-
+    func showRemoteView(uid: UInt) {
+        AgoraRtcManager.shared.displayRemoteVideo(remoteView: avatarView, uid: uid) {
+        }
+    }
 }

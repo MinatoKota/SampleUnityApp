@@ -34,6 +34,8 @@
 		14F7567C2B9ED6FB00351809 /* AgoraRtmChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7567B2B9ED6FB00351809 /* AgoraRtmChannelManager.swift */; };
 		14F7567F2B9ED74B00351809 /* ResultWithErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7567E2B9ED74B00351809 /* ResultWithErrorCode.swift */; };
 		14F756822B9ED7C000351809 /* RtmMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756812B9ED7C000351809 /* RtmMessage.swift */; };
+		14F756852B9EF29100351809 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756842B9EF29100351809 /* Constants.swift */; };
+		14F756882BA01FEA00351809 /* CallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756872BA01FEA00351809 /* CallUseCase.swift */; };
 		8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFB246E7721006A31CC /* HostViewController.swift */; };
 		8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFC246E7721006A31CC /* UnityUIView.swift */; };
 		8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFD246E7722006A31CC /* AppDelegate.swift */; };
@@ -82,6 +84,8 @@
 		14F7567B2B9ED6FB00351809 /* AgoraRtmChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraRtmChannelManager.swift; sourceTree = "<group>"; };
 		14F7567E2B9ED74B00351809 /* ResultWithErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWithErrorCode.swift; sourceTree = "<group>"; };
 		14F756812B9ED7C000351809 /* RtmMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtmMessage.swift; sourceTree = "<group>"; };
+		14F756842B9EF29100351809 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		14F756872BA01FEA00351809 /* CallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUseCase.swift; sourceTree = "<group>"; };
 		8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		8CAE7EFB246E7721006A31CC /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 		142213F82B888DA10068A519 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				14F756862BA01FBF00351809 /* UseCase */,
 				142213F92B888DB90068A519 /* Wrapper */,
 			);
 			path = Domain;
@@ -323,6 +328,22 @@
 			path = MessageType;
 			sourceTree = "<group>";
 		};
+		14F756832B9EF26800351809 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				14F756842B9EF29100351809 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		14F756862BA01FBF00351809 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				14F756872BA01FEA00351809 /* CallUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		9D15FC362264A15F0006315A = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +372,7 @@
 				9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */,
 				9D15FC502264A1600006315A /* Info.plist */,
 				8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */,
+				14F756832B9EF26800351809 /* Constants */,
 				142213F82B888DA10068A519 /* Domain */,
 				142213EC2B88885D0068A519 /* Presentation */,
 			);
@@ -464,6 +486,8 @@
 				142214202B8C45480068A519 /* ConversationListViewController.swift in Sources */,
 				1422143D2B8C65BE0068A519 /* CallViewController.swift in Sources */,
 				8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */,
+				14F756882BA01FEA00351809 /* CallUseCase.swift in Sources */,
+				14F756852B9EF29100351809 /* Constants.swift in Sources */,
 				142214402B8C65D20068A519 /* CallPresenter.swift in Sources */,
 				1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */,
 				142214242B8C45610068A519 /* MyPageViewController.swift in Sources */,

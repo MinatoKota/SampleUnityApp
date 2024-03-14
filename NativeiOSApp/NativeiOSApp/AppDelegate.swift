@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Unity.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
         setRootVC()
+        AgoraRtmSystemManager.shared.setup(appId: Constants.appId)
         return true
     }
 }
