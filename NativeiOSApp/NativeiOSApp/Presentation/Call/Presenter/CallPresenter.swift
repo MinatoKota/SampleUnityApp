@@ -13,6 +13,7 @@ import Foundation
 protocol CallPresenterInput: AnyObject {
 
     func viewDidLoad()
+    func viewWillAppear()
     func viewWillDisappear()
     func sendData()
 
@@ -22,7 +23,9 @@ protocol CallPresenterInput: AnyObject {
 
 protocol CallPresenterOutPut: AnyObject {
 
-    func showRemoteView(uid: UInt)
+    func sendRemoteView()
+    func displayRemoteVideo(uid: UInt)
+    func showLocalView()
 
 }
 
@@ -41,14 +44,19 @@ final class CallPresenter: NSObject, CallPresenterInput {
     func viewDidLoad() {
         useCase.callDelegate = self
         useCase.initializeAgoraEngine()
+        useCase.setExternalVideoSource()
         useCase.joinChannel() {
-            print("チャンネル入りました")
+            self.view?.showLocalView()
         }
     }
 
+    func viewWillAppear() {
+    }
+
+
     func viewWillDisappear() {
         useCase.leaveChannel(){
-            print("チャンネルから退出しました")
+            AgoraRtcManager.shared.destroyKit()
         }
     }
 
@@ -65,11 +73,15 @@ final class CallPresenter: NSObject, CallPresenterInput {
 
 extension CallPresenter: CallDelegate {
 
-    func shouldDisplayRemoteVideo(_ useCase: CallUseCase, uid: UInt) {
-        view?.showRemoteView(uid: uid)
+    func shouldSendRemoteVideo(_ useCase: CallUseCase) {
+        view?.sendRemoteView()
     }
-
+    
+    func shouldDisplayRemoteVideo(_ useCase: CallUseCase, uid: UInt) {
+        view?.displayRemoteVideo(uid: uid)
+    }
 }
+
 // MARK: - NativePlugin
 
 public class NativePlugin {

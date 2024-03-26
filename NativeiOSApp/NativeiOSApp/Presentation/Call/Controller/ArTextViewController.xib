@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArTextViewController" customModule="NativeiOSApp" customModuleProvider="target">
+            <connections>
+                <outlet property="ARView" destination="kle-Vh-iUr" id="7DN-ef-xd1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kle-Vh-iUr">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="OZy-GQ-G4R" appends="YES" id="zRj-jx-5JG"/>
+                    </connections>
+                </arscnView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kle-Vh-iUr" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="3Zx-Hi-QWJ"/>
+                <constraint firstItem="kle-Vh-iUr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TSY-FU-Dyr"/>
+                <constraint firstItem="kle-Vh-iUr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nXQ-aS-vPW"/>
+                <constraint firstItem="kle-Vh-iUr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wbc-J5-IqU"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
+        </view>
+        <tapGestureRecognizer id="OZy-GQ-G4R">
+            <connections>
+                <action selector="handleTap:" destination="-1" id="PmT-10-K5V"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

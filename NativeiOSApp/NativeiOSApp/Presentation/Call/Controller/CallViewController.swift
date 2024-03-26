@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARKit
 
 final class CallViewController: UIViewController {
 
@@ -15,6 +16,7 @@ final class CallViewController: UIViewController {
     }
 
     @IBOutlet private weak var avatarView: UIView!
+    @IBOutlet private weak var partnerView: UIView!
 
     private var presenter: CallPresenterInput?
     private let unityView = Unity.shared.view
@@ -30,19 +32,18 @@ final class CallViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        avatarView.addSubview(unityView)
-        unityView.frame = avatarView.bounds
-        avatarView.sendSubviewToBack(unityView)
         presenter?.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
         tabBarController?.tabBar.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         presenter?.viewWillDisappear()
+//        Unity.shared.stopUnity()
     }
 
 }
@@ -51,8 +52,21 @@ final class CallViewController: UIViewController {
 
 extension CallViewController: CallPresenterOutPut {
 
-    func showRemoteView(uid: UInt) {
-        AgoraRtcManager.shared.displayRemoteVideo(remoteView: avatarView, uid: uid) {
+    func showLocalView() {
+
+        avatarView.addSubview(unityView)
+        unityView.frame = avatarView.bounds
+        avatarView.sendSubviewToBack(unityView)
+    }
+
+    func sendRemoteView() {
+        AgoraRtcManager.shared.sendUnityViewAsAgoraView(frame: unityView)
+    }
+
+    func displayRemoteVideo(uid: UInt) {
+        AgoraRtcManager.shared.displayRemoteVideo(remoteView: partnerView, uid: uid) {
+            print("相手の画像表示に成功")
         }
     }
+
 }

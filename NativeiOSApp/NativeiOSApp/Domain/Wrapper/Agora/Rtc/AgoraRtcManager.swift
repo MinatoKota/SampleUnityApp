@@ -6,8 +6,8 @@
 //  Copyright © 2024 unity. All rights reserved.
 //
 
-import Foundation
 import AgoraRtcKit
+import Foundation
 
 final class AgoraRtcManager{
 
@@ -30,7 +30,14 @@ final class AgoraRtcManager{
     func setup(appId: String, delegate: AgoraRtcEngineDelegate) {
         kit = AgoraRtcEngineKit.sharedEngine(withAppId: appId, delegate: delegate)
         kit?.enableVideo()
+        kit?.enableAudio()
         print("🚀RTCのセットアップ完了")
+    }
+
+    /// ビデオキャプチャー時に必要な設定
+    func setExternalVideoSource() {
+        kit?.setExternalVideoSource(true, useTexture: true, sourceType: .videoFrame)
+        print("🚀CustomVideoSourceセットアップ完了")
     }
 
     /// AgoraRtcEngineDelegateを更新したいときに呼ぶ。
@@ -135,4 +142,66 @@ final class AgoraRtcManager{
     func switchCamera() {
         kit?.switchCamera()
     }
+
+    // あくまでもここにビデオデータを渡す必要がある
+    func sendUnityViewAsAgoraView(frame: UIView) {
+        var textureBuf: CVPixelBuffer?
+
+        if let pixelBuffer = captureUIViewAsPixelBuffer(view: frame) {
+            textureBuf = pixelBuffer
+        }
+
+        let videoFrame = AgoraVideoFrame()
+        videoFrame.format = 12
+        videoFrame.textureBuf = textureBuf
+        videoFrame.rotation = 0
+
+        // カメラデバイスやメディアからキャプチャした映像フレーム
+        let framePushed = kit?.pushExternalVideoFrame(videoFrame)
+    }
 }
+
+// MARK: - Private
+
+private extension AgoraRtcManager {
+
+    func captureUIViewAsPixelBuffer(view: UIView) -> CVPixelBuffer? {
+        // UIViewのサイズを取得
+        let viewSize = view.bounds.size
+
+        // 描画用のコンテキストを作成
+        UIGraphicsBeginImageContextWithOptions(viewSize, false, 0.0)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+
+        // UIViewの内容を描画
+        view.layer.render(in: context)
+
+        // 描画したイメージを取得
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+
+        // UIImageをCGImageに変換
+        guard let cgImage = image.cgImage else { return nil }
+
+        // CGImageをCVPixelBufferに変換
+        var pixelBuffer: CVPixelBuffer?
+        let options: [String: Any] = [
+            kCVPixelBufferCGImageCompatibilityKey as String: true,
+            kCVPixelBufferCGBitmapContextCompatibilityKey as String: true
+        ]
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(viewSize.width), Int(viewSize.height), kCVPixelFormatType_32BGRA, options as CFDictionary, &pixelBuffer)
+        guard status == kCVReturnSuccess, let finalPixelBuffer = pixelBuffer else { return nil }
+
+        CVPixelBufferLockBaseAddress(finalPixelBuffer, [])
+        let pixelData = CVPixelBufferGetBaseAddress(finalPixelBuffer)
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(finalPixelBuffer)
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        let graphicsContext = CGContext(data: pixelData, width: Int(viewSize.width), height: Int(viewSize.height), bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue)
+        graphicsContext?.draw(cgImage, in: CGRect(x: 0, y: 0, width: viewSize.width, height: viewSize.height))
+
+        CVPixelBufferUnlockBaseAddress(finalPixelBuffer, [])
+
+        return finalPixelBuffer
+    }
+}
+

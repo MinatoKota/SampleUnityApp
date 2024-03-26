@@ -44,6 +44,15 @@ final class Unity: NSObject, UnityFrameworkListener {
         unityFramework.appController()!.rootView!
     }
 
+    func stopUnity() {
+        unityFramework.pause(true)
+        print("🚀Unityを停止しました")
+    }
+
+    func showUnity() {
+        unityFramework.showUnityWindow()
+    }
+
     func sendMessageToUnity(objectName: String, functionName: String, argument: String) {
         unityFramework.sendMessageToGO(withName: objectName, functionName: functionName, message: argument)
     }

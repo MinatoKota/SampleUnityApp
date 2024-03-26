@@ -13,6 +13,7 @@ import Foundation
 // 通話のビジネスロジックを管理するUseCase
 
 protocol CallDelegate: AnyObject {
+    func shouldSendRemoteVideo(_ useCase: CallUseCase)
     func shouldDisplayRemoteVideo(_ useCase: CallUseCase, uid: UInt)
 }
 
@@ -23,6 +24,7 @@ protocol CallUseCaseInput: AnyObject {
     var callDelegate: CallDelegate? { get set }
 
     func initializeAgoraEngine()
+    func setExternalVideoSource()
     func joinChannel(completion: @escaping () -> Void)
     func leaveChannel(completion: @escaping () -> Void)
 
@@ -50,6 +52,10 @@ extension CallUseCase: CallUseCaseInput {
         AgoraRtcManager.shared.setup(appId: Constants.appId, delegate: self)
     }
 
+    func setExternalVideoSource() {
+        AgoraRtcManager.shared.setExternalVideoSource()
+    }
+
     func joinChannel(completion: @escaping () -> Void) {
         AgoraRtcManager.shared.joinChannel(token: "", channelId: Constants.channelId) {
             completion()
@@ -70,6 +76,12 @@ extension CallUseCase: AgoraRtcEngineDelegate {
 
     // Rtcに参加
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
+        callDelegate?.shouldSendRemoteVideo(self)
+    }
+
+    /// はじめて音声がデコードされたときに呼ばれる 相手がミュートしていると呼ばれない
+    func rtcEngine(_ engine: AgoraRtcEngineKit,
+                   firstRemoteAudioFrameDecodedOfUid uid: UInt, elapsed: Int) {
         callDelegate?.shouldDisplayRemoteVideo(self, uid: uid)
     }
 

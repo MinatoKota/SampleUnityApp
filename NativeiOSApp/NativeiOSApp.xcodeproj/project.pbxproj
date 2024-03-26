@@ -27,15 +27,19 @@
 		142214402B8C65D20068A519 /* CallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422143F2B8C65D20068A519 /* CallPresenter.swift */; };
 		144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; };
 		144159612B8869E200AD3750 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1441595F2B8869E200AD3750 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		14F756712B9ED54300351809 /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14F756702B9ED54300351809 /* AgoraRtcKit */; };
+		14DD44BA2BB276E200D25A98 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 14DD44B92BB276E200D25A98 /* RtcBasic */; };
+		14DD44BD2BB277EA00D25A98 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14DD44BC2BB277EA00D25A98 /* AgoraRtmKit */; };
 		14F756752B9ED5E900351809 /* AgoraRtcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756742B9ED5E900351809 /* AgoraRtcManager.swift */; };
-		14F756782B9ED68F00351809 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14F756772B9ED68F00351809 /* AgoraRtmKit */; };
 		14F7567A2B9ED6C800351809 /* AgoraRtmSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756792B9ED6C800351809 /* AgoraRtmSystemManager.swift */; };
 		14F7567C2B9ED6FB00351809 /* AgoraRtmChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7567B2B9ED6FB00351809 /* AgoraRtmChannelManager.swift */; };
 		14F7567F2B9ED74B00351809 /* ResultWithErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7567E2B9ED74B00351809 /* ResultWithErrorCode.swift */; };
 		14F756822B9ED7C000351809 /* RtmMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756812B9ED7C000351809 /* RtmMessage.swift */; };
 		14F756852B9EF29100351809 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756842B9EF29100351809 /* Constants.swift */; };
 		14F756882BA01FEA00351809 /* CallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756872BA01FEA00351809 /* CallUseCase.swift */; };
+		14F7568B2BA2AA5D00351809 /* ArTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F756892BA2AA5D00351809 /* ArTextViewController.swift */; };
+		14F7568C2BA2AA5D00351809 /* ArTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F7568A2BA2AA5D00351809 /* ArTextViewController.xib */; };
+		14F7568F2BA2AD6200351809 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F7568D2BA2AD5800351809 /* CoreLocation.framework */; };
+		14F756922BABD6D300351809 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14F756912BABD6D300351809 /* AgoraRtmKit */; };
 		8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFB246E7721006A31CC /* HostViewController.swift */; };
 		8CAE7EFF246E7722006A31CC /* UnityUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFC246E7721006A31CC /* UnityUIView.swift */; };
 		8CAE7F00246E7722006A31CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE7EFD246E7722006A31CC /* AppDelegate.swift */; };
@@ -86,6 +90,9 @@
 		14F756812B9ED7C000351809 /* RtmMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtmMessage.swift; sourceTree = "<group>"; };
 		14F756842B9EF29100351809 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14F756872BA01FEA00351809 /* CallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUseCase.swift; sourceTree = "<group>"; };
+		14F756892BA2AA5D00351809 /* ArTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArTextViewController.swift; sourceTree = "<group>"; };
+		14F7568A2BA2AA5D00351809 /* ArTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArTextViewController.xib; sourceTree = "<group>"; };
+		14F7568D2BA2AD5800351809 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE7EFA246E7721006A31CC /* NativeiOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeiOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		8CAE7EFB246E7721006A31CC /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -104,10 +111,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F756782B9ED68F00351809 /* AgoraRtmKit in Frameworks */,
-				14F756712B9ED54300351809 /* AgoraRtcKit in Frameworks */,
+				14DD44BD2BB277EA00D25A98 /* AgoraRtmKit in Frameworks */,
+				14F756922BABD6D300351809 /* AgoraRtmKit in Frameworks */,
+				14F7568F2BA2AD6200351809 /* CoreLocation.framework in Frameworks */,
 				9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */,
 				144159602B8869E200AD3750 /* UnityFramework.framework in Frameworks */,
+				14DD44BA2BB276E200D25A98 /* RtcBasic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +282,8 @@
 			children = (
 				1422143B2B8C65BE0068A519 /* CallViewController.swift */,
 				1422143C2B8C65BE0068A519 /* CallViewController.xib */,
+				14F756892BA2AA5D00351809 /* ArTextViewController.swift */,
+				14F7568A2BA2AA5D00351809 /* ArTextViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -382,6 +393,7 @@
 		9D78DAFB2265A7FC00274039 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14F7568D2BA2AD5800351809 /* CoreLocation.framework */,
 				1441595F2B8869E200AD3750 /* UnityFramework.framework */,
 				8CAE7EE7246E6ADC006A31CC /* UnityFramework.framework */,
 				9D78DAFC2265A7FC00274039 /* UIKit.framework */,
@@ -407,8 +419,9 @@
 			);
 			name = NativeiOSApp;
 			packageProductDependencies = (
-				14F756702B9ED54300351809 /* AgoraRtcKit */,
-				14F756772B9ED68F00351809 /* AgoraRtmKit */,
+				14F756912BABD6D300351809 /* AgoraRtmKit */,
+				14DD44B92BB276E200D25A98 /* RtcBasic */,
+				14DD44BC2BB277EA00D25A98 /* AgoraRtmKit */,
 			);
 			productName = NativeiOSApp;
 			productReference = 9D15FC3F2264A1600006315A /* NativeiOSApp.app */;
@@ -439,8 +452,8 @@
 			);
 			mainGroup = 9D15FC362264A15F0006315A;
 			packageReferences = (
-				14F7566F2B9ED54200351809 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
-				14F756762B9ED68F00351809 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */,
+				14DD44B82BB276E200D25A98 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+				14DD44BB2BB277EA00D25A98 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */,
 			);
 			productRefGroup = 9D15FC402264A1600006315A /* Products */;
 			projectDirPath = "";
@@ -460,6 +473,7 @@
 				142214292B8C45750068A519 /* SearchUserViewController.xib in Resources */,
 				9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */,
 				1422143E2B8C65BE0068A519 /* CallViewController.xib in Resources */,
+				14F7568C2BA2AA5D00351809 /* ArTextViewController.xib in Resources */,
 				142214212B8C45480068A519 /* ConversationListViewController.xib in Resources */,
 				9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */,
 				9D15FC4A2264A1600006315A /* Main.storyboard in Resources */,
@@ -487,6 +501,7 @@
 				1422143D2B8C65BE0068A519 /* CallViewController.swift in Sources */,
 				8CAE7EFE246E7722006A31CC /* HostViewController.swift in Sources */,
 				14F756882BA01FEA00351809 /* CallUseCase.swift in Sources */,
+				14F7568B2BA2AA5D00351809 /* ArTextViewController.swift in Sources */,
 				14F756852B9EF29100351809 /* Constants.swift in Sources */,
 				142214402B8C65D20068A519 /* CallPresenter.swift in Sources */,
 				1422140E2B8C1F510068A519 /* HostPresenter.swift in Sources */,
@@ -701,33 +716,37 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		14F7566F2B9ED54200351809 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+		14DD44B82BB276E200D25A98 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
 			requirement = {
-				kind = exactVersion;
-				version = 3.6.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
 			};
 		};
-		14F756762B9ED68F00351809 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */ = {
+		14DD44BB2BB277EA00D25A98 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AgoraIO/AgoraRTM_iOS";
 			requirement = {
-				kind = exactVersion;
-				version = 1.4.10;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		14F756702B9ED54300351809 /* AgoraRtcKit */ = {
+		14DD44B92BB276E200D25A98 /* RtcBasic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 14F7566F2B9ED54200351809 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
-			productName = AgoraRtcKit;
+			package = 14DD44B82BB276E200D25A98 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
 		};
-		14F756772B9ED68F00351809 /* AgoraRtmKit */ = {
+		14DD44BC2BB277EA00D25A98 /* AgoraRtmKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 14F756762B9ED68F00351809 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */;
+			package = 14DD44BB2BB277EA00D25A98 /* XCRemoteSwiftPackageReference "AgoraRTM_iOS" */;
+			productName = AgoraRtmKit;
+		};
+		14F756912BABD6D300351809 /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = AgoraRtmKit;
 		};
 /* End XCSwiftPackageProductDependency section */

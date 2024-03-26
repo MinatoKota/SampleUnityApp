@@ -10,6 +10,6 @@ import Foundation
 
 struct Constants {
 
-    static let appId: String = ""
+    static let appId: String = "271e86a1a00543438b628f6b7176e390"
     static let channelId: String = "test_channel_id"
 }
