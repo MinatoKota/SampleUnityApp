@@ -144,7 +144,7 @@ final class AgoraRtcManager{
     }
 
     // あくまでもここにビデオデータを渡す必要がある
-    func sendUnityViewAsAgoraView(frame: UIView) {
+    func sendUnityViewAsAgoraView(frame: UIView, uid: UInt) {
         var textureBuf: CVPixelBuffer?
 
         if let pixelBuffer = captureUIViewAsPixelBuffer(view: frame) {
@@ -156,8 +156,8 @@ final class AgoraRtcManager{
         videoFrame.textureBuf = textureBuf
         videoFrame.rotation = 0
 
-        // カメラデバイスやメディアからキャプチャした映像フレーム
-        let framePushed = kit?.pushExternalVideoFrame(videoFrame)
+        guard let framePushed = kit?.pushExternalVideoFrame(videoFrame, videoTrackId: uid) else { return }
+        print("🚀映像データ送りました?\(framePushed)")
     }
 }
 

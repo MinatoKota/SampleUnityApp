@@ -23,7 +23,7 @@ protocol CallPresenterInput: AnyObject {
 
 protocol CallPresenterOutPut: AnyObject {
 
-    func sendRemoteView()
+    func sendRemoteView(uid: UInt)
     func displayRemoteVideo(uid: UInt)
     func showLocalView()
 
@@ -46,17 +46,19 @@ final class CallPresenter: NSObject, CallPresenterInput {
         useCase.initializeAgoraEngine()
         useCase.setExternalVideoSource()
         useCase.joinChannel() {
+            Unity.shared.showUnity()
             self.view?.showLocalView()
         }
     }
 
     func viewWillAppear() {
-    }
 
+    }
 
     func viewWillDisappear() {
         useCase.leaveChannel(){
             AgoraRtcManager.shared.destroyKit()
+            Unity.shared.stopUnity()
         }
     }
 
@@ -73,8 +75,8 @@ final class CallPresenter: NSObject, CallPresenterInput {
 
 extension CallPresenter: CallDelegate {
 
-    func shouldSendRemoteVideo(_ useCase: CallUseCase) {
-        view?.sendRemoteView()
+    func shouldSendRemoteVideo(_ useCase: CallUseCase, uid: UInt) {
+        view?.sendRemoteView(uid: uid)
     }
     
     func shouldDisplayRemoteVideo(_ useCase: CallUseCase, uid: UInt) {

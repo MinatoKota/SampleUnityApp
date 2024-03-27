@@ -43,7 +43,6 @@ final class CallViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         presenter?.viewWillDisappear()
-//        Unity.shared.stopUnity()
     }
 
 }
@@ -53,14 +52,13 @@ final class CallViewController: UIViewController {
 extension CallViewController: CallPresenterOutPut {
 
     func showLocalView() {
-
         avatarView.addSubview(unityView)
         unityView.frame = avatarView.bounds
         avatarView.sendSubviewToBack(unityView)
     }
 
-    func sendRemoteView() {
-        AgoraRtcManager.shared.sendUnityViewAsAgoraView(frame: unityView)
+    func sendRemoteView(uid: UInt) {
+        AgoraRtcManager.shared.sendUnityViewAsAgoraView(frame: avatarView, uid: uid)
     }
 
     func displayRemoteVideo(uid: UInt) {
