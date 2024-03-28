@@ -30,7 +30,6 @@ final class AgoraRtcManager{
     func setup(appId: String, delegate: AgoraRtcEngineDelegate) {
         kit = AgoraRtcEngineKit.sharedEngine(withAppId: appId, delegate: delegate)
         kit?.enableVideo()
-        kit?.enableAudio()
         print("🚀RTCのセットアップ完了")
     }
 
@@ -157,7 +156,11 @@ final class AgoraRtcManager{
         videoFrame.rotation = 0
 
         guard let framePushed = kit?.pushExternalVideoFrame(videoFrame, videoTrackId: uid) else { return }
-        print("🚀映像データ送りました?\(framePushed)")
+        if framePushed {
+            print("⭕️ビデオデータ送信できました")
+        } else {
+            print("❌️ビデオデータ送信失敗")
+        }
     }
 }
 

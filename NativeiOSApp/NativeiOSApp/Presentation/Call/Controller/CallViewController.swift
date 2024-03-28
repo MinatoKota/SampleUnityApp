@@ -58,7 +58,7 @@ extension CallViewController: CallPresenterOutPut {
     }
 
     func sendRemoteView(uid: UInt) {
-        AgoraRtcManager.shared.sendUnityViewAsAgoraView(frame: avatarView, uid: uid)
+        AgoraRtcManager.shared.sendUnityViewAsAgoraView(frame: unityView, uid: uid)
     }
 
     func displayRemoteVideo(uid: UInt) {

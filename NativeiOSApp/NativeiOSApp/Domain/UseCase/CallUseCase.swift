@@ -59,6 +59,7 @@ extension CallUseCase: CallUseCaseInput {
     func joinChannel(completion: @escaping () -> Void) {
         AgoraRtcManager.shared.joinChannel(token: "", channelId: Constants.channelId) {
             AgoraRtcManager.shared.setClientRole(role: .broadcaster)
+            self.callDelegate?.shouldSendRemoteVideo(self, uid: 0)
             completion()
         }
     }
@@ -77,7 +78,7 @@ extension CallUseCase: AgoraRtcEngineDelegate {
 
     // Rtcに参加
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
-        self.callDelegate?.shouldSendRemoteVideo(self, uid: uid)
+
     }
     
     /// はじめて音声がデコードされたときに呼ばれる 相手がミュートしていると呼ばれない
